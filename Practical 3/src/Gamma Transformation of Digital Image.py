@@ -8,7 +8,17 @@ gamma = 0.0
 while gamma < 3.2:
     gamma_image = np.array(255 * (bw_image / 255) ** gamma, dtype=np.uint8)
     cv2.imshow("BW Power Log", gamma_image)
+    print(gamma)
+    if gamma == 1.2:
+        cv2.imwrite(f'../data/gamma{gamma}.png', gamma_image)
 
-    cv2.waitKey(500)
+    if gamma == 2:
+        cv2.imwrite(f'../data/gamma{gamma}.png', gamma_image)
+
+    if gamma == 3.1:
+        cv2.imwrite(f'../data/gamma{gamma}.png', gamma_image)
+
+    cv2.waitKey(1)
     gamma += 0.1
+
 cv2.destroyAllWindows()

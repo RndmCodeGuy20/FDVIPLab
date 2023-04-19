@@ -9,18 +9,19 @@ rgb = ["#118ab2", "#06d6a0", "#ef476f"]
 
 # reading image from data/ folder using opencv
 lena_image = cv2.imread('../data/lena.png', 1)
-lena_image_bw = cv2.imread('../data/lena.png', 0)
+img = cv2.imread('../data/lena.png', 0)
 # cv2.imshow("Lena Image", lena_image)
 
-plt.figure(figsize=(20, 10))
-for i, col in enumerate(['blue', 'green', 'red']):
-    histogram = cv2.calcHist([lena_image], [i], None, [256], [0, 256])
-    plt.subplot(1, 3, i + 1)
-    plt.title(col)
-    plt.plot(histogram, color=rgb[i])
-
-histogram_bw = cv2.calcHist([lena_image_bw], [0], None, [256], [0, 256])
-
+# plt.figure(figsize=(20, 10))
+# # for i, col in enumerate(['blue', 'green', 'red']):
+# #     histogram = cv2.calcHist([lena_image], [i], None, [256], [0, 256])
+# #     plt.subplot(1, 3, i + 1)
+# #     plt.title(col)
+# #     plt.plot(histogram, color=rgb[i])
+#
+# histogram = cv2.calcHist([lena_image], [0], None, [256], [0, 255])
+# histogram_bw = cv2.calcHist([lena_image_bw], [0], None, [256], [0, 256])
+#
 # plt.figure(figsize=(20, 10))
 # plt.subplot(221)
 # plt.title('Image Histogram')
@@ -33,7 +34,7 @@ histogram_bw = cv2.calcHist([lena_image_bw], [0], None, [256], [0, 256])
 # plt.xlabel('bins')
 # plt.ylabel('No. of Pixels')
 # plt.plot(histogram, color=colors[1])
-
+#
 # plt.subplot(223)
 # plt.title('Image Histogram B/W')
 # plt.xlabel('bins')
@@ -46,6 +47,10 @@ histogram_bw = cv2.calcHist([lena_image_bw], [0], None, [256], [0, 256])
 # plt.ylabel('No. of Pixels')
 # plt.plot(histogram_bw, color=colors[4])
 # plt.savefig('../plots/hist_rgb.svg', dpi=350)
+# plt.show()
+
+img_eq = cv2.equalizeHist(img)
+plt.hist(img_eq.ravel(), 256, [0, 256], color=colors[2])
 plt.show()
 
 cv2.waitKey(0)

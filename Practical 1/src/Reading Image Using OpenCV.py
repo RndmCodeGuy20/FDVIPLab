@@ -23,7 +23,8 @@ cv2.imshow("Lena Image Gray", lena_image_gray)
 # Get shape (h, w, d) of the image that is read
 print(f'Height of image : {h}\nWidth of image : {w}\nDepth of image : {d}')
 
-cv2.imwrite('../data/lena saved.jpg', lena_image)
+cv2.imwrite('../data/lena_og.png', lena_image)
+cv2.imwrite('../data/lena_gray.png', lena_image_gray)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

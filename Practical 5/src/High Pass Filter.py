@@ -36,10 +36,16 @@ filtered_image_3x3 = cv2.filter2D(image, -1, kernel_3x3)
 filtered_image_5x5 = cv2.filter2D(image, -1, kernel_5x5)
 filtered_image_5x5_2 = cv2.filter2D(image, -1, kernel_5x5_2)
 
-cv2.imshow("Original", image)
-cv2.imshow("Filtered 3x3", filtered_image_3x3)
-cv2.imshow("Filtered 5x5", filtered_image_5x5)
-cv2.imshow("Filtered 5x5_2", filtered_image_5x5_2)
+# cv2.imshow("Original", image)
+# cv2.imshow("Filtered 3x3", filtered_image_3x3)
+# cv2.imshow("Filtered 5x5", filtered_image_5x5)
+# cv2.imshow("Filtered 5x5_2", filtered_image_5x5_2)
+
+# saving the images
+
+cv2.imwrite("../data/filtered_image_3x3.jpg", filtered_image_3x3)
+cv2.imwrite("../data/filtered_image_5x5.jpg", filtered_image_5x5)
+cv2.imwrite("../data/filtered_image_5x5_2.jpg", filtered_image_5x5_2)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

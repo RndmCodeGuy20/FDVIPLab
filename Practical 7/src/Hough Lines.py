@@ -13,8 +13,11 @@ for line in lines:
     x1, y1, x2, y2 = line[0]
     cv2.line(img, (x1, y1), (x2, y2), (0, 0, 128), 1)
 
-cv2.imshow('line edges', edges)
-cv2.imshow('line detected', img)
+# cv2.imshow('line edges', edges)
+# cv2.imshow('line detected', img)
+
+cv2.imwrite('../data/lineEdges.png', edges)
+cv2.imwrite('../data/lineDetected.png', img)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

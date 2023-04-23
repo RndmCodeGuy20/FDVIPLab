@@ -8,7 +8,9 @@ img = cv2.imread('../data/lines.png', 0)
 kernel = np.ones((2, 19), np.uint8)
 
 horizontalLines = cv2.erode(img, kernel, iterations=1)
-cv2.imshow('vertical', horizontalLines)
+# cv2.imshow('vertical', horizontalLines)
+
+cv2.imwrite('../data/horizontalLines.png', horizontalLines)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

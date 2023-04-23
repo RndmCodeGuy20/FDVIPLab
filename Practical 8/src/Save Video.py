@@ -2,26 +2,16 @@
 # video using OpenCV
 import cv2
 
-# Create an object to read
-# from camera
-# video = cv2.VideoCapture(r"../data/video.mp4")
 video = cv2.VideoCapture(0)
 
-# We need to check if camera
-# is opened previously or not
 if not video.isOpened():
     print("Error reading video file")
 
-# We need to set resolutions.
-# so, convert them from float to integer.
 frame_width = int(video.get(3))
 frame_height = int(video.get(4))
 
 size = (frame_width, frame_height)
 
-# Below VideoWriter object will create
-# a frame of above defined The output
-# is stored in 'filename.avi' file.
 result = cv2.VideoWriter('../data/saved_vid.avi',
                          cv2.VideoWriter_fourcc(*'MJPG'),
                          10, size)

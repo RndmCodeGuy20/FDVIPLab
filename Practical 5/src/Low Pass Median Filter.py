@@ -31,8 +31,11 @@ for i in range(image.shape[0] - 1):
         temp.sort()
         filtered_image_3x3[i, j] = temp[4]
 
-cv2.imshow("Original", image)
-cv2.imshow("Filtered 5x5", filtered_image_5x5)
-cv2.imshow("Filtered 3x3", filtered_image_3x3)
+# cv2.imshow("Original", image)
+# cv2.imshow("Filtered 5x5", filtered_image_5x5)
+# cv2.imshow("Filtered 3x3", filtered_image_3x3)
+
+cv2.imwrite("../data/mri_2_filtered_5x5_med.png", filtered_image_5x5)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()

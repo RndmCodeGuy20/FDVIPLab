@@ -58,10 +58,6 @@ cv.imshow('Negative Transformation', img_neg)
 
 ### Output
 
-| ![](../data/neg.png) |
-|:--------------------:|
-|    Negative Image    |
-
 ## 2. Log Transformation
 
 ```python
@@ -73,9 +69,9 @@ cv.imshow('Log Transformation', img_log)
 
 ### Output
 
-| ![](../data/log.png) |
-|:--------------------:|
-|  Log Transformation  |
+| ![](../data/neg.png) | ![](../data/log.png) |
+|:--------------------:|:--------------------:|
+|    Negative Image    |  Log Transformation  |
 
 ## 3. Power-Law Transformation
 
@@ -120,6 +116,6 @@ cv.imshow('Grey Level Slicing', img_slice)
 
 ### Output
 
-| ![](../data/gl.png) |
-|:-------------------:|
-| Grey Level Slicing  |
+| <img src="../data/gl.png" height="300"> |
+|:---------------------------------------:|
+|           Grey Level Slicing            |

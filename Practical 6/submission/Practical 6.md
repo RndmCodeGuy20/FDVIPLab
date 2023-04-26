@@ -67,12 +67,6 @@ invert = cv2.bitwise_not(binr)
 erosion = cv2.erode(invert, kernel, iterations=1)
 ```
 
-### Output
-
-| ![eroded.png](..%2Fdata%2Feroded.png) |
-|:-------------------------------------:|
-|           **Eroded Image**            |
-
 ## 2. Dilation
 
 ### Creating Kernel
@@ -93,9 +87,9 @@ dilation = cv2.dilate(invert, kernel, iterations=1)
 
 ### Output
 
-| ![dilated.png](..%2Fdata%2Fdilated.png) |
-|:---------------------------------------:|
-|            **Dilated Image**            |
+| ![eroded.png](..%2Fdata%2Feroded.png) | ![dilated.png](..%2Fdata%2Fdilated.png) |
+|:-------------------------------------:|:---------------------------------------:|
+|           **Eroded Image**            |            **Dilated Image**            |
 
 ## 3. Opening
 
@@ -118,14 +112,9 @@ for i in range(0, 25, 5):
 
 ### Output
 
-| Iterations | Image                                         |
-|------------|-----------------------------------------------|
-| 0          | ![opening_0.png](..%2Fdata%2Fopening_0.png)   |
-| 5          | ![opening_5.png](..%2Fdata%2Fopening_5.png)   |
-| 10         | ![opening_10.png](..%2Fdata%2Fopening_10.png) |
-| 15         | ![opening_15.png](..%2Fdata%2Fopening_15.png) |
-| 20         | ![opening_20.png](..%2Fdata%2Fopening_20.png) |
-| 25         | ![opening_25.png](..%2Fdata%2Fopening_25.png) |
+|     Image     | ![opening_0.png](..%2Fdata%2Fopening_0.png) | ![opening_5.png](..%2Fdata%2Fopening_5.png) | ![opening_10.png](..%2Fdata%2Fopening_10.png) | ![opening_15.png](..%2Fdata%2Fopening_15.png) | ![opening_20.png](..%2Fdata%2Fopening_20.png) | ![opening_25.png](..%2Fdata%2Fopening_25.png) |
+|:-------------:|:-------------------------------------------:|:-------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|
+| **Iteration** |                    **0**                    |                    **5**                    |                    **10**                     |                    **15**                     |                    **20**                     |                    **25**                     |
 
 ## 4. Closing
 
@@ -148,11 +137,6 @@ for i in range(0, 25, 5):
 
 ### Output
 
-| Iterations | Image                                         |
-|------------|-----------------------------------------------|
-| 0          | ![closing_0.png](..%2Fdata%2Fclosing_0.png)   |
-| 5          | ![closing_5.png](..%2Fdata%2Fclosing_5.png)   |
-| 10         | ![closing_10.png](..%2Fdata%2Fclosing_10.png) |
-| 15         | ![closing_15.png](..%2Fdata%2Fclosing_15.png) |
-| 20         | ![closing_20.png](..%2Fdata%2Fclosing_20.png) |
-| 25         | ![closing_25.png](..%2Fdata%2Fclosing_25.png) |
+|     Image     | ![closing_0.png](..%2Fdata%2Fclosing_0.png) | ![closing_5.png](..%2Fdata%2Fclosing_5.png) | ![closing_10.png](..%2Fdata%2Fclosing_10.png) | ![closing_15.png](..%2Fdata%2Fclosing_15.png) | ![closing_20.png](..%2Fdata%2Fclosing_20.png) | ![closing_25.png](..%2Fdata%2Fclosing_25.png) |
+|:-------------:|:-------------------------------------------:|:-------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|
+| **Iteration** |                    **0**                    |                    **5**                    |                    **10**                     |                    **15**                     |                    **20**                     |                    **25**                     |

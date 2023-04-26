@@ -163,5 +163,4 @@ cv2.imshow("3x3 Kernel", filtered_image_3x3)
 
 ### Output
 
-![mri_2_filtered_5x5_med.png](..%2Fdata%2Fmri_2_filtered_5x5_med.png)
-
+<img src="../data/mri_2_filtered_5x5_med.png" height="300" width="300" align="center">
